@@ -1,8 +1,5 @@
 var routerApp = angular.module('routerApp',[
-	'ui.router',
-	'ngGrid',
-	'BookListModule',
-	'BookDetailModule']);
+	'ui.router','BookListModule','ngGrid']);
 /**
  * run在程序启动时，只会运行一次
  * 该步操作，是注入$state和$stateParams服务到root上
@@ -31,7 +28,9 @@ routerApp.config(function($stateProvider,$urlRouterProvider){
 		.state('booklist',{
 			url:'/{bookType:[0-9]{1,4}}',
 			views:{
-				'':{},
+				'':{
+					templateUrl:'tpls/bookList.html'
+				},
 				'booktype@booklist':{
 					templateUrl:'tpls/bookType.html'
 				},

@@ -1,5 +1,5 @@
 var routerApp = angular.module('routerApp',[
-	'ui.router','BookListModule','ngGrid']);
+	'ui.router','BookListModule','BookDetailModule','ngGrid']);
 /**
  * run在程序启动时，只会运行一次
  * 该步操作，是注入$state和$stateParams服务到root上
